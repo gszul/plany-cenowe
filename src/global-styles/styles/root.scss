@@ -2,7 +2,6 @@
 /// Here we define all the root variables we need for our project.
 /// For examples see Material Design color system: https://m2.material.io/design/color/the-color-system.html
 
-
 // FONTS
 @mixin font-header-1 {
     font-size: 48px;
@@ -27,7 +26,7 @@
 
 @mixin font-16-normal {
     font-size: 16px;
-    line-height: 22.4px;
+    line-height: 22px;
     font-weight: 400;
     letter-spacing: -0.01em;
 }
@@ -39,31 +38,30 @@
     letter-spacing: -0.01em;
 }
 
-
 :root {
     // COLORS
     --color-dominant-light: #ffffff;
-    --color-dominant-dark: #14132B;
-    --color-complementary: #989BB4;
-    
-    --color-border: #E8E5F9;
-    --color-background: #F9F8FB;
-    
+    --color-dominant-dark: #14132b;
+    --color-complementary: #989bb4;
+
+    --color-border: #e8e5f9;
+    --color-background: #f9f8fb;
+
     // - buttons
     --color-btn1-static: var(--color-dominant-dark);
     --color-btn1-hover: #393850;
     --color-btn1-active: #060613;
-    
-    --color-btn2-static: #7863F9;
-    --color-btn2-hover: #9180FF;
-    --color-btn2-active: #6A53F4;
-    
+
+    --color-btn2-static: #7863f9;
+    --color-btn2-hover: #9180ff;
+    --color-btn2-active: #6a53f4;
+
     // STYLES
     --border-radius-small: 16px;
     --border-radius-mid: 24px;
     --border-radius-large: 32px;
-    
+
     --stroke: 1px;
-    
+
     @include font-16-normal();
 }

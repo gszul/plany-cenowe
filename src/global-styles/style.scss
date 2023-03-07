@@ -18,7 +18,7 @@ body {
   min-height: 100vh;
   background-color: var(--color-background);
   font-family: "Source Sans Pro", sans-serif;
-  color: $color-dominant-dark;
+  color: var(--color-dominant-dark);
 }
 
 h1 {
@@ -33,6 +33,4 @@ h2 {
 
 p {
   color: var(--color-complementary);
-  line-height: 22.4px;
 }
-

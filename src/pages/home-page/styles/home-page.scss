@@ -1,3 +1,127 @@
 /// Homepage Styles File
 /// Here we import all the Styles files we need for our Homepage.
 
+@import "/src/global-styles/styles/root.scss";
+
+#home-page {
+   min-height: 100vh;
+   display: grid;
+   place-items: center;
+}
+
+.c-pricing {
+   padding: 24px;
+   display: grid;
+   justify-items: center;
+   gap: 48px;
+
+   & &__header {
+      max-width: 244px;
+      text-align: center;
+
+      & h1 {
+         margin-bottom: 16px;
+      }
+   }
+
+   & &__plans {
+      display: grid;
+      gap: 16px;
+   }
+
+   & &__plan {
+      // local colors variables
+      --background: var(--color-dominant-light);
+      --button-static: var(--color-btn1-static);
+      --button-hover: var(--color-btn1-hover);
+      --button-active: var(--color-btn1-active);
+      --font-color: var(--color-dominant-dark);
+      --marker-url: url("/public/images/v-light.svg");
+
+      &:nth-child(2) {
+         --background: var(--color-dominant-dark);
+         --button-static: var(--color-btn2-static);
+         --button-hover: var(--color-btn2-hover);
+         --button-active: var(--color-btn2-active);
+         --font-color: var(--color-dominant-light);
+         --marker-url: url("/public/images/v-dark.svg");
+         border: none;
+      }
+      // ***
+
+      min-height: 414px;
+      padding: 32px;
+      border: var(--stroke) solid var(--color-border);
+      border-radius: var(--border-radius-mid);
+      background-color: var(--background);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+   }
+
+   & &__plan-header,
+   & &__price,
+   & &__feature {
+      color: var(--font-color);
+   }
+
+   & &__price {
+      height: 42px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+
+      &-currency {
+         align-self: flex-start;
+         @include font-16-semibold();
+      }
+
+      &-value {
+         @include font-header-1();
+      }
+
+      &-period {
+         align-self: flex-end;
+         margin-left: 2px;
+         color: var(--color-complementary);
+         line-height: 1;
+      }
+   }
+
+   & &__features {
+      list-style: none;
+   }
+
+   & &__feature {
+      margin-bottom: 8px;
+      height: 22px;
+      
+      &::before {
+         content: var(--marker-url);
+         width: 16px;
+         height: 16px;
+         vertical-align: middle;
+         margin-right: 12px;
+      }
+   }
+
+   & &__submit {
+      margin-top: auto;
+      padding-block: 17px;
+      background-color: var(--button-static);
+      border-radius: var(--border-radius-small);
+      @include font-14-semibold();
+      color: var(--color-dominant-light);
+      text-decoration: none;
+      text-align: center;
+      -webkit-tap-highlight-color: transparent;
+
+      &:hover {
+         background-color: var(--button-hover);
+      }
+
+      &:active {
+         background-color: var(--button-active);
+      }
+   }
+}

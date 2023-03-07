@@ -1,64 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>INVO Academy JS Starter with Vite</title>
+   <meta charset="UTF-8" />
+   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>INVO Academy JS Starter with Vite</title>
 </head>
 
 <!-- In order to start your challenge, remove all the content inside <div id="home-page"></div> and start coding :) -->
 
 <body>
-  <div id="home-page">
-    <header>
-      <h1>Pricing</h1>
-      <p>Choose the right pricing for you and get started with your project.</p>
-    </header>
+   <div id="home-page">
+      <main class="c-pricing">
+         <section class="c-pricing__header">
+            <h1>Pricing</h1>
+            <p>
+               Choose the right pricing for you and get started with your
+               project.
+            </p>
+         </section>
 
-    <main>
-      <section class="pricing-section">
-        <h2>Basic</h2>
-        <p class="pricing-section__price"><sup>$</sup>399<sub>/year</sub></p>
-        <p class="pricing-section__description">For organizing every corner of your work & life.</p>
-        <ul>
-          <li>Collaborative workspace</li>
-          <li>7 day page history</li>
-        </ul>
-        <a href="#">Get started</a>
-      </section>
+         <section class="c-pricing__plans">
+            <article class="c-pricing__plan">
+               <h2 class="c-pricing__plan-header">Basic</h2>
+               <p class="c-pricing__price">
+                  <span class="c-pricing__price-currency">$</span>
+                  <span class="c-pricing__price-value">399</span>
+                  <span class="c-pricing__price-period">/year</span>
+               </p>
+               <p class="c-pricing__description">
+                  For organizing every corner of your work & life.
+               </p>
+               <ul class="c-pricing__features">
+                  <li class="c-pricing__feature">Collaborative workspace</li>
+                  <li class="c-pricing__feature">7 day page history</li>
+               </ul>
+               <a class="c-pricing__submit" href="#">Get started</a>
+            </article>
 
-      <section class="pricing-section">
-        <h2>Professional</h2>
-        <p class="pricing-section__price"><sup>$</sup>499<sub>/year</sub></p>
-        <p class="pricing-section__description">A place for small groups to plan & get organized.</p>
-        <ul>
-          <li>All features in Basic</li>
-          <li>Unlimited blocks for teams</li>
-          <li>30 day page history</li>
-        </ul>
-        <a href="#">Get started</a>
-      </section>
+            <article class="c-pricing__plan">
+               <h2 class="c-pricing__plan-header">Professional</h2>
+               <p class="c-pricing__price">
+                  <span class="c-pricing__price-currency">$</span>
+                  <span class="c-pricing__price-value">499</span>
+                  <span class="c-pricing__price-period">/year</span>
+               </p>
+               <p class="c-pricing__description">
+                  A place for small groups to plan & get organized.
+               </p>
+               <ul class="c-pricing__features">
+                  <li class="c-pricing__feature">All features in Basic</li>
+                  <li class="c-pricing__feature">Unlimited blocks for teams</li>
+                  <li class="c-pricing__feature">30 day page history</li>
+               </ul>
+               <a class="c-pricing__submit" href="#">Get started</a>
+            </article>
 
-      <section class="pricing-section">
-        <h2>Enterprise</h2>
-        <p class="pricing-section__price"><sup>$</sup>599<sub>/year</sub></p>
-        <p class="pricing-section__description">For companies using our software to connect several teams & tools.</p>
-        <ul>
-          <li>SAML SSO</li>
-          <li>Private teamspaces</li>
-          <li>Advanced page analytics</li>
-          <li>90 day page history</li>
-        </ul>
-        <a href="#">Get started</a>
-      </section>
-    </main>
+            <article class="c-pricing__plan">
+               <h2 class="c-pricing__plan-header">Enterprise</h2>
+               <p class="c-pricing__price">
+                  <span class="c-pricing__price-currency">$</span>
+                  <span class="c-pricing__price-value">599</span>
+                  <span class="c-pricing__price-period">/year</span>
+               </p>
+               <p class="c-pricing__description">
+                  For companies using our software to connect several teams &
+                  tools.
+               </p>
+               <ul class="c-pricing__features">
+                  <li class="c-pricing__feature">SAML SSO</li>
+                  <li class="c-pricing__feature">Private teamspaces</li>
+                  <li class="c-pricing__feature">Advanced page analytics</li>
+                  <li class="c-pricing__feature">90 day page history</li>
+               </ul>
+               <a class="c-pricing__submit" href="#">Get started</a>
+            </article>
+         </section>
+      </main>
+   </div>
 
-  </div>
-
-  <script type="module" src="/src/global-scripts/main.js"></script>
-  <script type="module" src="/src/pages/home-page/scripts/home-page.js"></script>
+   <script type="module" src="/src/global-scripts/main.js"></script>
+   <script type="module" src="/src/pages/home-page/scripts/home-page.js"></script>
 </body>
-
 </html>
