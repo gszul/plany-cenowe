@@ -5,5 +5,5 @@ export default {
     css: {
         devSourcemap: true,
     },
-    base: '/plany-cenowe/',
+    base: '/plany-cenowe/'
 }
