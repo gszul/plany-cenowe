@@ -2,6 +2,10 @@
 /// Here we define all the root variables we need for our project.
 /// For examples see Material Design color system: https://m2.material.io/design/color/the-color-system.html
 
+// MEDIA BREAKPOINTS
+$tablet: 800px;
+$desktop: 1100px;
+
 // FONTS
 @mixin font-header-1 {
     font-size: 48px;
