@@ -10,11 +10,12 @@
 }
 
 .c-pricing {
+   max-width: 1052px;
    padding: 24px;
    display: grid;
    justify-items: center;
    gap: 48px;
-
+   
    & &__header {
       max-width: 244px;
       text-align: center;
@@ -46,17 +47,20 @@
          --font-color: var(--color-dominant-light);
          --marker-url: url("/public/images/v-dark.svg");
          border: none;
+         padding: 32px;
       }
       // ***
 
       min-height: 414px;
-      padding: 32px;
+      max-width: 414px;
+      padding: 31px;
       border: var(--stroke) solid var(--color-border);
       border-radius: var(--border-radius-mid);
       background-color: var(--background);
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-rows: repeat(4, auto) 1fr;
       gap: 16px;
+      transition: .25s;
    }
 
    & &__plan-header,
@@ -88,26 +92,30 @@
       }
    }
 
+   & &__description {
+      margin-right: 1px;
+   }
+
    & &__features {
       list-style: none;
    }
 
    & &__feature {
       margin-bottom: 8px;
-      height: 22px;
       
       &::before {
          content: var(--marker-url);
          width: 16px;
          height: 16px;
-         vertical-align: middle;
          margin-right: 12px;
+         line-height: 1;
+         vertical-align: middle;
       }
    }
 
    & &__submit {
       margin-top: auto;
-      padding-block: 17px;
+      padding: 17px 32px;
       background-color: var(--button-static);
       border-radius: var(--border-radius-small);
       @include font-14-semibold();
@@ -115,6 +123,8 @@
       text-decoration: none;
       text-align: center;
       -webkit-tap-highlight-color: transparent;
+      cursor: pointer;
+      transition: background-color .25s ease-in-out;
 
       &:hover {
          background-color: var(--button-hover);
@@ -125,10 +135,40 @@
       }
    }
 
-   @media only screen and (min-width: $tablet) {
+   @media only screen and (min-width: $tablet) and (max-width: ($desktop - 1px)){
       & &__plan {
-         grid-template-columns: 50% auto;
+         min-height: 278px;
+         width: clamp(578px, 90vw, 674px);
+         max-width: 674px;
+         grid-template-columns: 244px 1fr;
          grid-template-rows: auto auto 1fr;
+         gap: 0 10px;
+      }
+
+      & &__description {
+         margin-block: 10px 16px;
+      }
+
+      & &__price {
+         grid-column: 2 / 3;
+         grid-row: 1 / 3;
+         justify-self: end;
+      }
+
+      & &__feature {
+         margin-block: 8px 0;
+      }
+
+      & &__submit {
+         width: 260px;
+         justify-self: end;
+      }
+   }
+
+   @media screen and (min-width: $desktop) {
+      & &__plans {
+         grid-auto-flow: column;
+         grid-template-columns: repeat(3, 1fr);
       }
    }
 }
